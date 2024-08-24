@@ -145,18 +145,5 @@ body{
   }
 }
 
-/* Tablets (e.g., iPad) */
-@media (min-width: 1024px) and (max-width: 1280px) {
-  .main {
-    width: 70%;
-  }
-  .inputElement {
-    font-size: 3em;
-  }
-  .number {
-    padding: 0.7em;
-    font-size: 2.5em;
-  }
-}
 
 
