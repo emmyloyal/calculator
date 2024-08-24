@@ -66,7 +66,17 @@
 
             }
             function equal(){
-                display.value =eval(display.value)
+                
+
+                try{
+                     display.value =eval(display.value)
+                    
+
+                }catch(error){
+
+                    display.value ='syntax error'
+
+                }
             }
             function cle(){
                 display.value ='';
@@ -74,6 +84,8 @@
 
             function number66(){
                 display.value =display.value/100
+
+               
             }
 
 
