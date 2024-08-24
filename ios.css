@@ -1,0 +1,129 @@
+
+
+body{
+    display: grid;
+    justify-content: center;
+}
+.main{
+    background-color: black;
+    display: grid;
+    width: 40em;
+    border-style: none;
+    border-radius: 2em;
+    
+
+}
+
+
+.inputElement{
+    direction: rtl;
+    padding-top: 5em;
+    color: white;
+    padding-left: 2em;
+    padding-right: 1em;
+    border-style: none;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: black;
+    font-size: 3em;
+    border-bottom-style:none ;
+    outline: none;
+    border-radius: 2em;
+}
+
+
+.inputDiv{
+    display: grid;
+    row-gap: 1em;
+    width: 100%;
+    margin: 0;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    
+
+}
+.number0{
+
+    padding: 0.5em;
+    padding-right: 5em;
+    background-color: rgb(69, 68, 67);
+    border-radius: 2.5em;
+    font-size: 2.5em;
+    display: flex;
+    justify-content: center;
+}
+.number0:active{
+    background-color: rgb(226, 219, 219);
+    opacity: 0.2;
+    transition: opacity 0.8s;
+}
+.number2:active{
+    background-color: rgb(226, 219, 219);
+    opacity: 0.2;
+    transition: opacity 0.8s;
+}
+.number:active{
+    background-color: rgb(226, 219, 219);
+    opacity: 0.2;
+    transition: opacity 380s;
+}
+.number3:active{
+    background-color: rgb(226, 219, 219);
+    opacity: 0.1;
+    transition: opacity 9s;
+}
+
+.first{
+    display: flex;
+    color: white;
+    justify-content: space-around;
+    row-gap: 1em;
+}
+.number2{
+    background-color: rgb(154, 167, 177);
+    color: black;
+    font-weight: bold;
+    
+    padding: 0.6em;
+    width: 1.8em;
+    border-radius: 50%;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+.number6{
+    background-color: rgb(154, 167, 177);
+    color: black;
+    font-weight: bold;
+    
+    padding: 0.6em;
+    width: 1.8em;
+    border-radius: 50%;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+.number3{
+    padding: 0.5em;
+    width: 1.8em;
+    background-color: rgb(225, 159, 60);
+    border-radius: 2.5em;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+
+}
+.number{
+    padding: 0.5em;
+    width: 1.8em;
+    background-color: rgb(69, 68, 67);
+    border-radius: 2.5em;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
