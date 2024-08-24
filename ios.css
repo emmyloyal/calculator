@@ -128,3 +128,49 @@ body{
     justify-content: center;
     cursor: pointer;
 }
+
+
+
+/* Small phones (e.g., iPhone 5) */
+@media (max-width: 320px) {
+  .main {
+    width: 90%;
+  }
+  .inputElement {
+    font-size: 2em;
+  }
+  .number {
+    padding: 0.3em;
+    font-size: 1.5em;
+  }
+}
+
+/* Large phones (e.g., iPhone 12 Pro Max) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .main {
+    width: 80%;
+  }
+  .inputElement {
+    font-size: 2.5em;
+  }
+  .number {
+    padding: 0.5em;
+    font-size: 2em;
+  }
+}
+
+/* Tablets (e.g., iPad) */
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .main {
+    width: 70%;
+  }
+  .inputElement {
+    font-size: 3em;
+  }
+  .number {
+    padding: 0.7em;
+    font-size: 2.5em;
+  }
+}
+
+

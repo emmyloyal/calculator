@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ios calculator</title>
+        <style>
+
+            
+
+body{
+    display: grid;
+    justify-content: center;
+    padding-top: 8em;
+}
+.main{
+    background-color: black;
+    display: grid;
+    width: 40em;
+    border-style: none;
+    border-radius: 2em;
+    
+
+}
+
+
+.inputElement{
+    direction: rtl;
+    padding-top: 5em;
+    color: white;
+    padding-left: 2em;
+    padding-right: 1em;
+    border-style: none;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: black;
+    font-size: 3em;
+    border-bottom-style:none ;
+    outline: none;
+    border-radius: 2em;
+}
+
+
+.inputDiv{
+    display: grid;
+    row-gap: 1em;
+    width: 100%;
+    margin: 0;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    
+
+}
+.number0{
+
+    padding: 0.5em;
+    padding-right: 5em;
+    background-color: rgb(69, 68, 67);
+    border-radius: 2.5em;
+    font-size: 2.5em;
+    display: flex;
+    justify-content: center;
+}
+.number0:active{
+    background-color: rgb(226, 219, 219);
+    opacity: 0.2;
+    transition: opacity 0.8s;
+}
+.number2:active{
+    background-color: rgb(226, 219, 219);
+    opacity: 0.2;
+    transition: opacity 0.8s;
+}
+.number:active{
+    background-color: rgb(226, 219, 219);
+    opacity: 0.2;
+    transition: opacity 380s;
+}
+.number3:active{
+    background-color: rgb(226, 219, 219);
+    opacity: 0.1;
+    transition: opacity 9s;
+}
+
+.first{
+    display: flex;
+    color: white;
+    justify-content: space-around;
+    row-gap: 1em;
+}
+.number2{
+    background-color: rgb(154, 167, 177);
+    color: black;
+    font-weight: bold;
+    
+    padding: 0.6em;
+    width: 1.8em;
+    border-radius: 50%;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+.number6{
+    background-color: rgb(154, 167, 177);
+    color: black;
+    font-weight: bold;
+    
+    padding: 0.6em;
+    width: 1.8em;
+    border-radius: 50%;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+.number3{
+    padding: 0.5em;
+    width: 1.8em;
+    background-color: rgb(225, 159, 60);
+    border-radius: 2.5em;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+
+}
+.number{
+    padding: 0.5em;
+    width: 1.8em;
+    background-color: rgb(69, 68, 67);
+    border-radius: 2.5em;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+        </style>
+    </head>
+
+    <body>
+        <div class="main">
+            <div class="inpute" >
+                <input class="inputElement" readonly placeholder="0">
+
+            </div>
+
+
+            <div class="inputDiv">
+                <div class="first">
+                    <div class="number2" onclick="cle()">AC</div>
+                    <div class="number2" onclick="disp('-')">+/-</div>
+                    <div class="number6" onclick="number66()">%</div>
+                    <div class="number3" onclick="disp('/')">/</div>
+                </div>
+
+                <div class="first">
+                    <div class="number" onclick="disp('7')">7</div>
+                    <div class="number" onclick="disp('8')">8</div>
+                    <div class="number" onclick="disp('9')">9</div>
+                    <div class="number3" onclick="disp('*')">X</div>
+                </div>
+
+                <div class="first">
+                    <div class="number" onclick="disp('4')">4</div>
+                    <div class="number" onclick="disp('5')">5</div>
+                    <div class="number" onclick="disp('6')">6</div>
+                    <div class="number3" onclick="disp('-')">-</div>
+                </div>
+
+                <div class="first">
+                    <div class="number" onclick="disp('1')">1</div>
+                    <div class="number" onclick="disp('2')">2</div>
+                    <div class="number" onclick="disp('3')">3</div>
+                    <div class="number3" onclick="disp('+')">+</div>
+                </div>
+
+                <div class="first">
+                    <div class="number0" onclick="disp('0')">0</div>
+                    <div class="number" onclick="disp('.')">.</div>
+                    <div class="number3" onclick="equal()">=</div>
+                    
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+        <script>
+
+            let display = document.querySelector('.inputElement');
+            let number6 =document.querySelector('.number6');
+
+            function disp(input){
+                display.value +=input;
+
+
+            }
+            function equal(){
+                
+
+                try{
+                     display.value =eval(display.value)
+                    
+
+                }catch(error){
+
+                    display.value ='syntax error'
+
+                }
+            }
+            function cle(){
+                display.value ='';
+            }
+
+            function number66(){
+                display.value =display.value/100
+
+               
+            }
+
+
+        </script>      
+
+
+    </body>
+
+
+</html>
