@@ -3,6 +3,7 @@
 body{
     display: grid;
     justify-content: center;
+    padding-top: 8em;
 }
 .main{
     background-color: black;
