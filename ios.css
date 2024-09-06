@@ -94,12 +94,13 @@ body {
 
         background-color: #fff;
         color: white;
-        
-        text-align: left;
+        text-align: right;
         background-color: transparent;
         border: none;
         font-size: 2rem;
         outline: none;
+        padding-right: 3rem;
+        
     }
     .first div {
         padding: 1rem;
@@ -116,6 +117,7 @@ body {
     }
     .inputDiv{
         gap: 1rem;
+        padding: 2rem;
     
 
     
