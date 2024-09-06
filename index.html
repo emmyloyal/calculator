@@ -1,98 +1,104 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>ios calculator</title>
-        <link rel="stylesheet" href="ios.css">
-    </head>
 
-    <body>
-        <div class="main">
-            <div class="inpute" >
-                <input class="inputElement" readonly placeholder="0">
+<head>
+    <title>ios calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ios.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
 
-            </div>
-
-
-            <div class="inputDiv">
-                <div class="first">
-                    <div class="number2" onclick="cle()">AC</div>
-                    <div class="number2" onclick="disp('-')">+/-</div>
-                    <div class="number6" onclick="number66()">%</div>
-                    <div class="number3" onclick="disp('/')">/</div>
-                </div>
-
-                <div class="first">
-                    <div class="number" onclick="disp('7')">7</div>
-                    <div class="number" onclick="disp('8')">8</div>
-                    <div class="number" onclick="disp('9')">9</div>
-                    <div class="number3" onclick="disp('*')">X</div>
-                </div>
-
-                <div class="first">
-                    <div class="number" onclick="disp('4')">4</div>
-                    <div class="number" onclick="disp('5')">5</div>
-                    <div class="number" onclick="disp('6')">6</div>
-                    <div class="number3" onclick="disp('-')">-</div>
-                </div>
-
-                <div class="first">
-                    <div class="number" onclick="disp('1')">1</div>
-                    <div class="number" onclick="disp('2')">2</div>
-                    <div class="number" onclick="disp('3')">3</div>
-                    <div class="number3" onclick="disp('+')">+</div>
-                </div>
-
-                <div class="first">
-                    <div class="number0" onclick="disp('0')">0</div>
-                    <div class="number" onclick="disp('.')">.</div>
-                    <div class="number3" onclick="equal()">=</div>
-                    
-                </div>
-
-            </div>
-
-
+<body>
+    <div class="main">
+        <div class="inpute">
+            <input class="inputElement" readonly placeholder="0">
 
         </div>
 
-        <script>
 
-            let display = document.querySelector('.inputElement');
-            let number6 =document.querySelector('.number6');
+        <div class="inputDiv">
+            <div class="first">
+                <div class="number2" onclick="cle()">AC</div>
+                <div class="number2" onclick="disp('-')">+/-</div>
+                <div class="number2" onclick="number66()">%</div>
+                <div class="number3" onclick="disp('/')">/</div>
+            </div>
 
-            function disp(input){
-                display.value +=input;
+            <div class="first">
+                <div onclick="disp('7')">7</div>
+                <div onclick="disp('8')">8</div>
+                <div onclick="disp('9')">9</div>
+                <div class="number3" onclick="disp('*')">X</div>
+            </div>
 
+            <div class="first">
+                <div onclick="disp('4')">4</div>
+                <div onclick="disp('5')">5</div>
+                <div onclick="disp('6')">6</div>
+                <div class="number3" onclick="disp('-')">-</div>
+            </div>
+
+            <div class="first">
+                <div onclick="disp('1')">1</div>
+                <div onclick="disp('2')">2</div>
+                <div onclick="disp('3')">3</div>
+                <div class="number3" onclick="disp('+')">+</div>
+            </div>
+
+            <div class="first">
+                <div class="number0" onclick="disp('0')">0</div>
+                <div onclick="disp('.')">.</div>
+                <div class="number3" onclick="equal()">=</div>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+    <script>
+
+        let display = document.querySelector('.inputElement');
+        let number6 = document.querySelector('.number6');
+
+        function disp(input) {
+            display.value += input;
+
+
+
+        }
+        function equal() {
+
+
+            try {
+                display.value = eval(display.value)
+
+
+            } catch (error) {
+
+                display.value = 'syntax error'
 
             }
-            function equal(){
-                
+        }
+        function cle() {
+            display.value = '';
+        }
 
-                try{
-                     display.value =eval(display.value)
-                    
-
-                }catch(error){
-
-                    display.value ='syntax error'
-
-                }
-            }
-            function cle(){
-                display.value ='';
-            }
-
-            function number66(){
-                display.value =display.value/100
-
-               
-            }
+        function number66() {
+            display.value = display.value / 100
 
 
-        </script>      
+        }
 
 
-    </body>
+    </script>
+
+
+</body>
 
 
 </html>

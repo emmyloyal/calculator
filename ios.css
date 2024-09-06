@@ -1,149 +1,123 @@
-
-
-body{
-    display: grid;
+body {
+    display: flex;
     justify-content: center;
-    padding-top: 8em;
+    align-items: center;
+    /* background-color: #e0e0e0; */
+    height:  100svh;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
 }
-.main{
+
+.main {
     background-color: black;
-    display: grid;
-    width: 40em;
-    border-style: none;
-    border-radius: 2em;
-    
-
+    border-radius: 2rem;
+    padding: 3.5rem;
 }
 
 
-.inputElement{
-    direction: rtl;
-    padding-top: 5em;
+
+.inputElement {
+
+    background-color: #fff;
     color: white;
-    padding-left: 2em;
-    padding-right: 1em;
-    border-style: none;
-    margin: 0;
-    box-sizing: border-box;
-    width: 100%;
-    background-color: black;
-    font-size: 3em;
-    border-bottom-style:none ;
+    margin: 7rem 0 2rem 0;
+    text-align: right;
+    background-color: transparent;
+    border: none;
+    font-size: 3rem;
     outline: none;
-    border-radius: 2em;
 }
 
 
-.inputDiv{
-    display: grid;
-    row-gap: 1em;
-    width: 100%;
-    margin: 0;
-    padding-top: 3em;
-    padding-bottom: 3em;
-    
-
+.inputDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
-.number0{
 
-    padding: 0.5em;
-    padding-right: 5em;
+.first .number0 {
+    width: 40%;
+    border-radius: 5rem;
+}
+
+.first div:active {
+    background-color: rgb(226, 219, 219);
+    opacity: 0.2;
+    transition: opacity 0.1;
+}
+
+
+.first {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+}
+
+.first div {
+    padding: 1.7rem;
     background-color: rgb(69, 68, 67);
-    border-radius: 2.5em;
-    font-size: 2.5em;
+    border-radius: 50%;
+    font-size: 2rem;
+    height: 3rem;
+    width: 3rem;
+    cursor: pointer;
     display: flex;
+    align-items: center;
     justify-content: center;
-}
-.number0:active{
-    background-color: rgb(226, 219, 219);
-    opacity: 0.2;
-    transition: opacity 0.8s;
-}
-.number2:active{
-    background-color: rgb(226, 219, 219);
-    opacity: 0.2;
-    transition: opacity 0.8s;
-}
-.number:active{
-    background-color: rgb(226, 219, 219);
-    opacity: 0.2;
-    transition: opacity 380s;
-}
-.number3:active{
-    background-color: rgb(226, 219, 219);
-    opacity: 0.1;
-    transition: opacity 9s;
 }
 
-.first{
-    display: flex;
-    color: white;
-    justify-content: space-around;
-    row-gap: 1em;
-}
-.number2{
-    background-color: rgb(154, 167, 177);
+.first .number2 {
+    background-color: #ccc;
     color: black;
-    font-weight: bold;
-    
-    padding: 0.6em;
-    width: 1.8em;
-    border-radius: 50%;
-    font-size: 2em;
-    display: flex;
-    justify-content: center;
-    cursor: pointer;
 }
-.number6{
-    background-color: rgb(154, 167, 177);
-    color: black;
-    font-weight: bold;
-    
-    padding: 0.6em;
-    width: 1.8em;
-    border-radius: 50%;
-    font-size: 2em;
-    display: flex;
-    justify-content: center;
-    cursor: pointer;
-}
-.number3{
-    padding: 0.5em;
-    width: 1.8em;
+
+
+.first .number3 {
     background-color: rgb(225, 159, 60);
-    border-radius: 2.5em;
-    font-size: 2em;
-    display: flex;
-    justify-content: center;
-    cursor: pointer;
-
-}
-.number{
-    padding: 0.5em;
-    width: 1.8em;
-    background-color: rgb(69, 68, 67);
-    border-radius: 2.5em;
-    font-size: 2em;
-    display: flex;
-    justify-content: center;
-    cursor: pointer;
 }
 
 
 
-/* Small phones (e.g., iPhone 5) */
-@media (max-width: 450px) {
-  .main {
-    width: 90%;
-  }
-  .inputElement {
-    font-size: 2em;
-  }
-  .number {
-    padding: 0.3em;
-    font-size: 1.5em;
-  }
-}
+@media screen and (max-width: 450px) {
+    body{
+        background-color: black;
+    }
+    .main{
+        
+    }
+    
+    .inputElement {
 
+        background-color: #fff;
+        color: white;
+        
+        text-align: left;
+        background-color: transparent;
+        border: none;
+        font-size: 2rem;
+        outline: none;
+    }
+    .first div {
+        padding: 1rem;
+        background-color: rgb(69, 68, 67);
+        border-radius: 50%;
+        font-size: 2rem;
+        height: 3rem;
+        width: 3rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .inputDiv{
+        gap: 1rem;
+    
 
+    
+    }
 
+    
+  }
